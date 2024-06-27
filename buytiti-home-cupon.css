@@ -1,0 +1,74 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espacio entre las tarjetas */
+}
+
+.product-item-cupon-buytiti {
+    flex: 1 1 calc(25% - 1rem); /* Ajusta el ancho de las tarjetas */
+    box-sizing: border-box;
+}
+
+.product-card-cupon-buytiti {
+    border: 1px solid #ddd; /* Color del borde */
+    border-radius: 10px; /* Borde redondeado */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.product-card-cupon-buytiti:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra en hover */
+    transform: scale(1.05); /* Efecto de crecer */
+    
+}
+
+.product-image-cupon-buytiti {
+    border-top-left-radius: 10px; /* Borde superior izquierdo */
+    border-top-right-radius: 10px; /* Borde superior derecho */
+}
+
+.product-info-cupon-buytiti {
+    padding: .75rem; /* Espaciado interno */
+}
+
+.product-code-cupon-buytiti {
+    font-size: 1.125rem !important;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.product-actions-cupon-buytiti {
+    padding: .75rem; /* Espaciado interno */
+}
+
+.product-validity-cupon-buytiti {
+    margin-bottom: 1px !important;
+    color: #000;
+    font-size: .875rem;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.view-products-button-cupon-buytiti {
+    border: .8px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    font-weight: bold;
+    font-size: .875rem;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.view-products-button-cupon-buytiti:hover {
+    background-color: #000;
+    color: #fff;
+}
+@media (min-width: 490px) and (max-width: 720px) {
+    .product-item-cupon-buytiti {
+        flex: 1 1 calc(50% - 1rem); /* Ajusta el ancho de las tarjetas a dos por fila */
+    }
+}
