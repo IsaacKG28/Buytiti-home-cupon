@@ -4,9 +4,22 @@
     gap: 1rem; /* Espacio entre las tarjetas */
 }
 
+.product-list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Espacio entre las tarjetas */
+}
+
 .product-item-cupon-buytiti {
     flex: 1 1 calc(25% - 1rem); /* Ajusta el ancho de las tarjetas */
     box-sizing: border-box;
+}
+
+.product-item-product-buytiti {
+    flex: 1 1 calc(25% - 1rem); /* Ajusta el ancho de las tarjetas */
+    box-sizing: border-box;
+    width: 288px; /* Ancho fijo */
+    height: 512px; /* Altura fija */
 }
 
 .product-card-cupon-buytiti {
@@ -17,13 +30,33 @@
     text-decoration: none; /* Eliminar subrayado */
 }
 
+.products-cards-buytiti-promos {
+    border: 1px solid #ddd; /* Color del borde */
+    border-radius: 10px; /* Borde redondeado */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none; /* Eliminar subrayado */
+    width: 100%; /* Asegura que la tarjeta tome todo el ancho del contenedor */
+}
+
 .product-card-cupon-buytiti:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra en hover */
     transform: scale(1.05); /* Efecto de crecer */
-    
+}
+
+.products-cards-buytiti-promos:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra en hover */
+    transform: scale(1.05); /* Efecto de crecer */
 }
 
 .product-image-cupon-buytiti {
+    border-top-left-radius: 10px; /* Borde superior izquierdo */
+    border-top-right-radius: 10px; /* Borde superior derecho */
+}
+
+.product-image-cards-buytiti {
+    width: 100%; /* Asegura que la imagen tome todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
     border-top-left-radius: 10px; /* Borde superior izquierdo */
     border-top-right-radius: 10px; /* Borde superior derecho */
 }
@@ -32,7 +65,16 @@
     padding: .75rem; /* Espaciado interno */
 }
 
+.products-info-cards-buytiti {
+    padding: .75rem; /* Espaciado interno */
+}
+
 .product-code-cupon-buytiti {
+    font-size: 1.125rem !important;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.products-h3-cards-buytiti {
     font-size: 1.125rem !important;
     text-decoration: none; /* Eliminar subrayado */
 }
@@ -41,7 +83,18 @@
     padding: .75rem; /* Espaciado interno */
 }
 
+.product-actions-cards-buytiti {
+    padding: .75rem; /* Espaciado interno */
+}
+
 .product-validity-cupon-buytiti {
+    margin-bottom: 1px !important;
+    color: #000;
+    font-size: .875rem;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+.product-info-cards-buytiti {
     margin-bottom: 1px !important;
     color: #000;
     font-size: .875rem;
@@ -63,12 +116,83 @@
     text-decoration: none; /* Eliminar subrayado */
 }
 
+.view-products-button-cards-buytiti {
+    border: .8px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: black;
+    font-weight: bold;
+    font-size: .875rem;
+    padding-bottom: .25rem;
+    padding-top: .25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
 .view-products-button-cupon-buytiti:hover {
     background-color: #000;
     color: #fff;
 }
-@media (min-width: 490px) and (max-width: 720px) {
-    .product-item-cupon-buytiti {
+
+.view-products-button-cards-buytiti:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+    background-color: #000; /* Color de fondo */
+    color: #fff; /* Color del icono */
+    border: none; /* Sin bordes */
+    border-radius: 50%; /* Bordes redondeados */
+    width: 30px; /* Ancho */
+    height: 30px; /* Altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-prev-arrow::before,
+.custom-next-arrow::before {
+    font-size: 16px; /* Tamaño del icono */
+    color: #fff; /* Color del icono */
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+    right: -10px !important;
+    margin-top: -4rem !important;
+    background-color: coral !important;
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Estilo del icono de la flecha */
+.custom-prev-arrow::before {
+    content: '\f053'; /* Icono de flecha izquierda (usa el código del icono que prefieras) */
+    font-family: 'Font Awesome 5 Free'; /* Asegúrate de que Font Awesome esté cargado */
+    font-weight: 900; /* Peso del icono */
+}
+
+.custom-next-arrow::before {
+    content: '\f054'; /* Icono de flecha derecha (usa el código del icono que prefieras) */
+    font-family: 'Font Awesome 5 Free'; /* Asegúrate de que Font Awesome esté cargado */
+    font-weight: 900; /* Peso del icono */
+}
+
+@media (min-width: 360px) and (max-width: 720px) {
+    .product-item-cupon-buytiti, .product-item-product-buytiti {
         flex: 1 1 calc(50% - 1rem); /* Ajusta el ancho de las tarjetas a dos por fila */
+    }
+    .slick-dots {
+        bottom: -2.5rem;
+    }
+    .view-products-button-cupon-buytiti, .view-products-button-cards-buytiti {
+        margin-left: 0rem;
+    }
+    .slick-slide img {
+        margin-left: -4px !important;
     }
 }
